@@ -228,24 +228,39 @@
 <div class="form-group">
 	<label class="control-label  col-sm-2" for="psw">Kata Sandi:</label>
 	<div class="col-sm-10"> 
-		<input type="password" required autocomplete="off" class="form-control req" name="pwd" placeholder="Kata Sandi">
+		<input type="password" required autocomplete="on" class="form-control req" name="pwd" placeholder="Kata Sandi" id="pswrd">
 	</div>
 </div>
 <div class="form-group">
 	<label for="confpsw" class="control-label col-sm-2" >Konfirmasi Kata Sandi:</label>
 	<div class="col-sm-10"> 
-		<input type="password" required autocomplete="off"  class="form-control req" name="confpwd"  placeholder="Konfirmasi Kata Sandi">
+		<input type="password" required autocomplete="on"  class="form-control req" name="confpwd"  placeholder="Konfirmasi Kata Sandi" id="verivy">
 	</div>
 </div>
-<div id="recaptcha_widget" style="display:none">
-	<div class="control-group">
-		<label class="control-label"></label>
-		<div class="controls">
-			<a id="recaptcha_image" href="#" class="thumbnail"></a>
-			<div class="recaptcha_only_if_incorrect_sol" style="color:red">Incorrect please try again</div>
-		</div>
-	</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#verivy').keyup(function(){
+        if($(this).val() == $('#pswrd').val()){
+            $('#sukses').removeClass('hidden');
+            $('#gagal').addClass('hidden');
+        }
+        else{
+            $('#gagal').removeClass('hidden');
+            $('#sukses').addClass('hidden');
+        }
+    });
+});
+</script>
+
+<div class="alert alert-danger hidden" role="alert" id="gagal">
+  <strong>Password berbeda</strong> password terdeteksi berbeda dari sebelumnya
 </div>
+
+<div class="alert alert-success hidden" role="alert" id="sukses">
+  <strong>password cocok!</strong>
+</div>
+
 <div class="form-group"> 
 	<div class="col-sm-offset-2 col-sm-10">
 		<button type="submit" class="btn btn-default">Submit</button>

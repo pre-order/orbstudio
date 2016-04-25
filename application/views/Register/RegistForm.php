@@ -157,13 +157,13 @@
 <div class="form-group">
 	<label class="control-label col-sm-2" for="Kecamatan">Kecamatan:</label>
 	<div class="col-sm-10 ">
-		<input type="text" required autocomplete="off" class="form-control req" name="alamat" placeholder="kecamatan">
+		<input type="text" required autocomplete="off" class="form-control req" name="kecamatan" placeholder="kecamatan">
 	</div>
 </div>
 <div class="form-group">
 	<label class="control-label col-sm-2" for="kabupaten">Kabupaten:</label>
 	<div class="col-sm-10 ">
-		<input type="text" required autocomplete="off" class="form-control req" name="alamat" placeholder="Kabupaten">
+		<input type="text" required autocomplete="off" class="form-control req" name="kabupaten" placeholder="Kabupaten">
 	</div>
 </div>
 

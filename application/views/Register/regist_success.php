@@ -4,7 +4,7 @@
     <p align="center" style="font-size:22px;">Akun Anda Sudah TerRegistrasi..</p>
     <p align="center" style="font-size:22px;">silahkan lengkapi verifikasi setelah melakukan Login.</p>
     <script language=javascript>
-    setTimeout("location.href='index.php'", 5000);
+    setTimeout("location.href='<?php echo site_url('welcome/index'); ?>'", 5000);
     </script>
 </div>
 </div>

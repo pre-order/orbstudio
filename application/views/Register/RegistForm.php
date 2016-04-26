@@ -1,6 +1,7 @@
 
 
 <div class="container" style="padding-top: 150px;">
+    <div class="col-md-9">
     <form class="form-horizontal" name="input_data" action="<?php echo site_url('Regist/registerasi') ?>" method="post" style="color:#7f7f7f;">
 <h1>Daftar</h1>
 
@@ -218,11 +219,40 @@
 	</div>
 </div>
 
-<div class="form-group">
-	<label class="control-label col-sm-2" for="email">Email:</label>
-	<div class="col-sm-10 "> 
-		<input type="email" required autocomplete="off" class="form-control req" name="email" placeholder="Email">
-	</div>
+<?php echo validation_errors(); ?>
+<div class=" form-group">
+    <?php echo validation_errors(); ?>
+    <label class="control-label col-sm-2">E-mail</label>
+    <div class="col-sm-10">
+    <input id="email" class="form-control req" name="email" type="text" value=""  />
+    <label id="message"></label>
+    <span id="loading"><img src="<?php echo base_url(); ?>assets/icon/loading/cube.gif" alt="Ajax Indicator" /></span> </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+   <script type="text/javascript">
+   $(document).ready(function() {
+        /// make loader hidden in start
+    $('#loading').hide();
+
+     $('#email').blur(function(){
+        var email_val = $("#email").val();
+        var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+        if(filter.test(email_val)){
+            // show loader
+            $('#loading').show();
+            $.post("<?php echo site_url()?>/Regist/email_check", {
+                email: email_val
+            }, function(response){
+                $('#loading').hide();
+                $('#message').html('').html(response.message).show().delay(5000).fadeOut();
+            });
+            return false;
+        }
+    });
+    
+    });  
+</script>
 </div>
 
 <div class="form-group">
@@ -267,4 +297,5 @@ $(document).ready(function(){
 	</div>
 </div>
 </form>
+</div>
 </div>

@@ -16,7 +16,7 @@ Class registermodel extends CI_Model{
             'Provinsi' => $this->input->post('Provinsi'),
             'Alamat_user' => $this->input->post('alamat'),
             'Contac_User' => $this->input->post('noTelp'),
-            'Pass'=> $this->input->post('pwd')
+            'Pass'=> md5($this->input->post('pwd'))
         );
         
        $this->db->insert('data_user', $data);

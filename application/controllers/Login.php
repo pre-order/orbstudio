@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Regist extends CI_Controller {
+class Login extends CI_Controller {
     
     public function index(){
         $this->load->view('head');

@@ -3,7 +3,9 @@
 <div class="container" style="padding-top: 150px;">
     <div class="col-md-9">
     <form class="form-horizontal" name="input_data" action="<?php echo site_url('Regist/registerasi') ?>" method="post" style="color:#7f7f7f;">
-<h1>Daftar</h1>
+
+        
+        <h1>Daftar</h1>
 
 
 <div class="form-group">
@@ -220,8 +222,8 @@
 </div>
 
 <?php echo validation_errors(); ?>
+        
 <div class=" form-group">
-    <?php echo validation_errors(); ?>
     <label class="control-label col-sm-2">E-mail</label>
     <div class="col-sm-10">
     <input id="email" class="form-control req" name="email" type="text" value=""  />

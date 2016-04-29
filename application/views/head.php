@@ -4,9 +4,10 @@
 	<title>pre-order.com</title>
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/custom.css"); ?>" />
-        <link rel="stylesheet" href="<?php echo base_url("assets/engine1/style.css"); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url("assets/engine1/style.css"); ?>" />
 	<link rel="stylesheet" href="<?php echo base_url("assets/fonts/flaticon.css"); ?>" />
-		
+	<link rel="stylesheet" href="<?php echo base_url("assets/materialdesign/material.css"); ?>" />
+	
          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="<?php echo base_url("assets/js/js/bootstrap.js"); ?>"></script>

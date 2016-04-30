@@ -1,6 +1,6 @@
 <div class="container" style="padding-top: 150px; padding-bottom:150px;">
     
-<div class="col-md-4 col-md-offset-4">
+<div class="col-md-9 col-md-offset-4">
     <div class="panel panel-default">
   <div class="panel-heading"><h3 class="panel-title"><strong>Sign In </strong></h3></div>
   <div class="panel-body">
@@ -20,3 +20,4 @@
 </div>
     
 </div>
+

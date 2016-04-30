@@ -80,7 +80,7 @@
                         
                         
         <li>
-		<a href="Login.php"><img src="<?php echo base_url(); ?>assets/icon/Icon Login/Login 64px.png" alt=""/></a>
+		<a href="<?php echo site_url('Login/index') ?>"><img src="<?php echo base_url(); ?>assets/icon/Icon Login/Login 64px.png" alt=""/></a>
 	</li>
         
             <li align="center">

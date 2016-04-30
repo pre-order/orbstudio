@@ -18,7 +18,7 @@ class Login extends CI_Controller {
         $this->load->helper(array('form'));
         $this->load->view('head');
         $this->load->view('navbar');
-        $this->load->view('LoginForm');
+        $this->load->view('Login/LoginForm');
         $this->load->view('footer');
     }
     

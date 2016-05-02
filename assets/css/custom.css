@@ -5,7 +5,7 @@ body {
   font-family: nunito;
 }
 .navbar-default {
-  background-color: #00C39A;
+  background-color: #f8f8f8;
   border-color: #ffffff;
   font-family: nunito;
 }
@@ -19,7 +19,7 @@ body {
 background-color: #00AD86;
 }
 .navbar-default {
-  background-color: #00C39A;
+  background-color: #f8f8f8;
   border-color: #ffffff;
   font-family: nunito;
 }
@@ -41,7 +41,7 @@ background-color: #00AD86;
   color: #ffffff;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
-  background-color: #00C39A;
+  background-color: #f8f8f8;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
   color: #ffffff;
@@ -52,7 +52,7 @@ background-color: #00AD86;
   background-color: #00AD86;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-  background-color: #00C39A;
+  background-color: #f8f8f8;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover, 
@@ -97,7 +97,7 @@ background-color: #00AD86;
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #00C39A;
+    background-color: #f8f8f8;
   }
 }
 
@@ -123,7 +123,7 @@ background-color: #00AD86;
         margin: 0 auto;
         text-align:center;
         cursor: auto;
-        background-color: #00C39A;
+        background-color: #f8f8f8;
         opacity: 0.8;
 }
 

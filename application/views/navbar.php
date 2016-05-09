@@ -10,20 +10,34 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-        <a class="navbar-brand" href="<?php echo site_url('welcome/index'); ?>"><img src="<?php echo base_url(); ?>assets/icon/PO/PO 85px.png" style="height:64px;" alt=""/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
           
-          
-        <li align="center"><a href="index.php"><img src="<?php echo base_url(); ?>assets/icon/Tentang PO/tentang PO 85px.png" alt="" style="height:64px;"/></a></li>
-        
+        <!----search dropdown--->  
+        <li class="dropdown" align="center">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" style=" padding-bottom: 5px;">
+           <span class="icon-search" style="font-size:48px; color:#00C9D8;">
+           </span></a>
+            <ul class="dropdown-menu mega-dropdown-menu" style="top:85px;">
+                <li>
+                
+                <form class="navbar-form" id="search" role="search">
+                        <div class="form-group" style="padding-top:20px;">
+                            <input style="width:420px;" type="text" class="form-control" placeholder="Search">
+                        </div>
+                </form>
+                </li>
+            </ul>
+        </li>
+        <!------search dropdown----->
         
         
         <!-- dropdown -->
         <li class="dropdown" align="center">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style=" padding-bottom: 5px;">
-                    <img src="<?php echo base_url(); ?>assets/icon/Kategori/Kategori 85px.png" style="height:64px;" alt=""/></a>
+           <span class="icon-category" style="font-size:48px; color:#006dbc;">
+           </span></a>
             
                 <ul class="dropdown-menu multi-column columns-3" style="width:70%; top:90px;">
                     <div class="row">
@@ -56,16 +70,9 @@
         <!-- dropdown -->
             
             
-         <!-- Search box -->
-        <li  >
-                <form class="navbar-form" id="search" role="search">
-                        <div class="form-group" style="padding-top:20px;">
-                            <input style="width:420px;" type="text" class="form-control" placeholder="Search">
-                        </div></form>
-            </li>
-            <!-- Search box -->
-            
-        <li align="center"><a href="#"></a></li> 
+         <li>
+            <a href="<?php echo site_url('Welcome/index') ?>"><span class="icon-logo" style="color:#00C39A; font-size:64px;"></span></a>
+	</li>
       
         <?php
 			if(!empty($_SESSION['username'])){ ?>
@@ -80,11 +87,11 @@
                         
                         
         <li>
-		<a href="<?php echo site_url('Login/index') ?>"><img src="<?php echo base_url(); ?>assets/icon/Icon Login/Login 64px.png" alt=""/></a>
+            <a href="<?php echo site_url('Login/index') ?>"><span class="icon-login" style="color:#F9B031; font-size:48px;"></span></a>
 	</li>
         
             <li align="center">
-                <a href="<?php echo site_url('Regist/registform') ?>"><img src="<?php echo base_url(); ?>assets/icon/Icon Daftar/Daftar 85px.png" style="height:64px;" alt=""/></a>
+                <a href="<?php echo site_url('Regist/registform') ?>"><span class="icon-daftar" style="color:#2F546C; font-size:48px;"></span></a>
             </li>
         
       </ul>

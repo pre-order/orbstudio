@@ -244,9 +244,71 @@ background-color: #e7e7e7;
   content: '';
 }
 
+<<<<<<< HEAD
+.mega-dropdown-menu .form-group {
+  margin-bottom: 3px;
+<<<<<<< HEAD
+}
+
+/*==================FORM LOGIN====================*/
+.panel-default > .panel-heading {
+  color: #FFFFFF;
+  background-color: #00C39A;
+  border-color: #00AD86;
+}
+.panel-default > .panel-footer {
+  color: #FFFFFF;
+  background-color: #00C39A;
+  border-color: #00AD86;
+  padding-top: 0%;
+}
+
+.form-login {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #532020;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #EA5C75;
+    border-radius: 4px;
+}
+
+.btn-default-login {
+  color: #FFFFFF;
+  background-color: #EA5C75;
+  border-color: #EA5C75;
+}
+.btn-default-login:focus,
+.btn-default-login.focus {
+  color: #FFFFFF;
+  background-color: #F43658;
+  border-color: #EA5C75;
+}
+.btn-default-login:hover {
+  color: #FFFFFF;
+  background-color: #F43658;
+  border-color: #EA5C75;
+}
+.btn-default-login:active,
+.btn-default-login.active,
+.open > .dropdown-toggle.btn-default-login {
+  color: #FFFFFF;
+  background-color: #F43658;
+  border-color: #EA5C75;
+}
+/*==================FORM LOGIN====================*/
+=======
+}
+>>>>>>> parent of 38e1e0b... css from login
+=======
 .brand {
     position: absolute;
     left: 50%;
     display: block;
 	padding-top:20px;
 }
+>>>>>>> origin/master

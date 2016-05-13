@@ -244,13 +244,6 @@ background-color: #e7e7e7;
   content: '';
 }
 
-<<<<<<< HEAD
-.mega-dropdown-menu .form-group {
-  margin-bottom: 3px;
-<<<<<<< HEAD
-}
-
-/*==================FORM LOGIN====================*/
 .panel-default > .panel-heading {
   color: #FFFFFF;
   background-color: #00C39A;
@@ -300,15 +293,10 @@ background-color: #e7e7e7;
   background-color: #F43658;
   border-color: #EA5C75;
 }
-/*==================FORM LOGIN====================*/
-=======
-}
->>>>>>> parent of 38e1e0b... css from login
-=======
+
 .brand {
     position: absolute;
     left: 50%;
     display: block;
 	padding-top:20px;
 }
->>>>>>> origin/master

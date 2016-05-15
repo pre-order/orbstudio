@@ -8,7 +8,7 @@
            
             <li>
 					<a href="#">
-						<span class="icon-Avatar" style="font-size: 48px; color: #0094cf"> </span>
+						<span class="icon-help" style="font-size: 48px; color: #0094cf"> </span>
 					</a>
 			</li>
 					

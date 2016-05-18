@@ -296,7 +296,8 @@ background-color: #e7e7e7;
 
 .brand {
     position: absolute;
-    left: 50%;
+    left: 45%;
     display: block;
-	padding-top:20px;
+    padding-top:20px;
+    margin-left:-2px;
 }

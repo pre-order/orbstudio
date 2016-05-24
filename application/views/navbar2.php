@@ -1,10 +1,10 @@
-  <nav class="navbar navbar-default navbar-fixed-top" style="height: 100px; background-color: #fff; border:1px solid #f8f8f8; " >
+  <nav class="navbar navbar-default navbar-fixed-top" style="height: 100px; background-color: #f8f8f8; border:1px solid #f8f8f8; " >
         <div class="container-fluid">     
         <ul class="nav navbar-nav navbar-left pull-left">
            
             <li>
                 <a href="#">
-                    <span class="icon-Home" style="font-size: 48px; color: #0094cf"> </span>
+                    <span class="icon-Avatar" style="font-size: 48px; color: #0094cf"> </span>
 		</a>
             </li>
 					
@@ -19,7 +19,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"></a>
+                            <a href="#">Page 1-2</a>
                         </li>
                         <li>
                             <a href="#">Page 1-3</a>

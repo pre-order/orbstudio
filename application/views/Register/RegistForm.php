@@ -151,6 +151,8 @@
 		</div>
 	</div>
 </div>
+
+
 <div class="form-group">
 	<label class="control-label col-sm-2" for="alamat">Alamat:</label>
 	<div class="col-sm-10 ">

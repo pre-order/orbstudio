@@ -33,7 +33,9 @@
             </li> 
         </ul>
             
-            <a class="brand" href="<?php echo site_url('Welcome/index') ?>"><span style="padding-top: 0px"><img src="<?php echo base_url(); ?>assets/images/Untitled-2.png" width="134px" height="163px" /></span></a> 
+            <a class="brand" href="<?php echo site_url('Welcome/index') ?>"><span 
+                    style="padding-top: 0px"><img src="<?php echo base_url(); ?>assets/images/Untitled-2.png " 
+                                              width="134px" height="163px" style=" width: 100px; height: 121px; "  /></span></a> 
             
         <ul class="nav navbar-nav navbar-right pull-right">
            

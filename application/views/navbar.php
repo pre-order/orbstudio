@@ -8,21 +8,14 @@
 		</a>
             </li>
 					
-            <li class="dropdown">
+            <li class="dropdown"> 
 		<a class="dropdown-toggle" data-toggle="dropdown" style="color: #d44f3b; padding-bottom:0px; height:79px"  href="#">
                             <p class="icon-category" style="font-size: 48px; color: #d44f3b"></p>
                 </a>
-                    <ul class="dropdown-menu" min-width="10px" width="93px" width="93px" style="background-color: #d44f3b"  >
+                    <ul class="dropdown-menu" min-width="10px" width="93px" width="93px" style="background-color: #fff; left: -40;"   >                      
                         <li>
-                            <a href="#">
-                                <span class="icon-Kategori1" style="font-size: 16px; color: #008bc3"/></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"></a>
-                        </li>
-                        <li>
-                            <a href="#">Page 1-3</a>
+                            <a href="#"> <span class="icon-elektronik" style="font-size: 32px; color: #008bc3">
+                                <text style="font-size:14; color: #008bc3;">Elektronik</text> </span></a>
                         </li> 
                     </ul>           
             </li> 
@@ -37,15 +30,19 @@
             
         <ul class="nav navbar-nav navbar-right pull-right">
            
-            <li class="dropdown">  
+            <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" style="color: #d44f3b; padding-bottom:0px; height:79px" href="#">
                     <span class="icon-search" style="font-size: 48px; color: #32b6c7"> </span>
                 </a>
                      <ul class="dropdown-menu" min-width="10px" width="93px" width="93px" style="background-color: #32b6c7"  >
+                      
                         <li>
-                            <a href="#">
-                                <span class="icon-Kategori1" style="font-size: 16px; color: #008bc3"/></span>
-                            </a>
+                            <form class="navbar-form" id="search">
+                                <div class="form-group" style="pading-top:20px;">
+                                    <input style="width:250px;" type="text" class="form-control" placeholder="Search">
+                                </div>
+                            </form> 
+                        </li>     
                      </ul>
             </li>
             <li>

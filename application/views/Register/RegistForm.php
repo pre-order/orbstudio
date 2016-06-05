@@ -18,6 +18,7 @@
 	<label class="control-label col-sm-2" for="tgl">Tanggal Lahir:</label>
 	<div class="form-inline">
             
+		
 		<select class="form-control" style="margin-left: 15px;" name="tanggal">
 		<option value="1">1</option>
                 <option value="2">2</option>

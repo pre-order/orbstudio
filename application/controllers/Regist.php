@@ -15,7 +15,7 @@ class Regist extends CI_Controller {
         $this->load->database();
         // load form validation library
         $this->load->library('form_validation');
-        // load model registermodel
+        $this->load->library('encryption');
         
     }
 
@@ -36,15 +36,28 @@ class Regist extends CI_Controller {
             $this->form_validation->set_message('is_unique[data_user.Email]', 'Email sudah di gunakan');
             if ($this->form_validation->run() == FALSE)
 		{
-		$this->load->view('head');
+		        $this->load->view('head');
                 $this->load->view('navbar');
                 $this->load->view('Register/RegistForm.php');
                 $this->load->view('footer');
 		}
 		else
 		{
-                $this->load->model('registermodel');
-                $this->registermodel->insert_regist();
+                $date = $_POST['tanggal'] . '-' . $_POST['bulan'] . '-' . $_POST['tahun'];
+                $password = $this->input->post('pwd');
+                $hash = $this->encryption->encrypt($password);
+                $data = array(
+                    'Nama_user' => $this->input->post('nama'),
+                    'jenis_kel' => $this->input->post('jenisKelamin'),
+                    'Email'=> $this->input->post('email'),
+                    'Tanggal_lahir' => $date,
+                    'Kecamatan' => $this->input->post('kecamatan'),
+                    'Kabupaten' => $this->input->post('kabupaten'),
+                    'Provinsi' => $this->input->post('Provinsi'),
+                    'Alamat_user' => $this->input->post('alamat'),
+                    'Contac_User' => $this->input->post('noTelp'),
+                    'Pass'=> $hash );
+                $this->db->insert('data_user', $data);
                 $this->load->view('head');
                 $this->load->view('navbar');
                 $this->load->view('Register/regist_success');
@@ -69,3 +82,4 @@ class Regist extends CI_Controller {
     }
 
 }
+        

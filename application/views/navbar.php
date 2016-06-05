@@ -5,11 +5,11 @@
             <li>
                 <a href="#">
                     <span class="icon-Home" style="font-size: 48px; color: #0094cf"> </span>
-		</a>
+		        </a>
             </li>
 					
             <li class="dropdown"> 
-		<a class="dropdown-toggle" data-toggle="dropdown" style="color: #d44f3b; padding-bottom:0px; height:79px"  href="#">
+		        <a class="dropdown-toggle" data-toggle="dropdown" style="color: #d44f3b; padding-bottom:0px; height:79px"  href="#">
                             <p class="icon-category" style="font-size: 48px; color: #d44f3b"></p>
                 </a>
                     <ul class="dropdown-menu" min-width="10px" width="93px" width="93px" style="background-color: #fff; left: -40;"   >                      
@@ -45,12 +45,20 @@
                         </li>     
                      </ul>
             </li>
+            
+            <?php if ($this->session->userdata('username') == TRUE) {?>
+
+    <li class="nav navbar-nav navbar-right">
+        <a href="<?php echo site_url('Login/logout'); ?>" class="btn btn-default btn-outline btn-circle collapsed">logout</a>   
+    </li>   
+
+            <?php } else { ?>
             <li>
-		<a href="<?php echo site_url('Login/index') ?>">
+		        <a href="<?php echo site_url('Login/index') ?>">
                     <span class="icon-login" style="color:#d44f3b; font-size:48px;"></span>
                 </a>
             </li>
-        
+            <?php } ?>
             <li align="center">
                 <a href="<?php echo site_url('Regist/registform') ?>">
                     <span class="icon-daftar" style="color:#0094cf; font-size:48px;"></span>

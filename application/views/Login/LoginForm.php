@@ -1,4 +1,9 @@
 <div class="container" style="padding-top: 150px; padding-bottom:150px;">
+
+    <p class="alert alert-danger">
+    <?php echo validation_errors(); ?>
+    </p>
+    
     
 <div class="col-md-4 col-md-offset-4">
     <div class="panel panel-default">

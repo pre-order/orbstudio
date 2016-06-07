@@ -27,7 +27,7 @@ class Login extends CI_Controller {
     public function logincheck(){
         $this->load->library('form_validation');
  
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
        
    if($this->form_validation->run() == FALSE)
@@ -45,7 +45,7 @@ class Login extends CI_Controller {
    }
     }
     
-    function check_database($pbkdf2)
+    function check_database($encrypt)
  {
    //Field validation succeeded.  Validate against database
    $email = $this->input->post('email');

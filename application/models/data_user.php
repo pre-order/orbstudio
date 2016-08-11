@@ -22,6 +22,9 @@ class data_user extends CI_models{
     }
 
     function GetAlamat($email){
+        $this->db->select('Provinsi');
+        $this->db->select('Kabupaten');
+        $this->db->select('Kecamatan');
         $this->db->select('Alamat_User');
         $this->db->where('Email', $email);
         $query = $this->db->get('data_user');
@@ -59,7 +62,7 @@ class data_user extends CI_models{
     }
 
     function RegistUser($datauser){
-        $this->db->insert($datauser);
+        $this->db->insert('data_user',$datauser);
     }
 
 
@@ -72,6 +75,8 @@ class data_user extends CI_models{
         $this->db->set('Foto_profil', $urlfoto);
         $this->db->update('data_user');
     }
+
+    
    
 }
 

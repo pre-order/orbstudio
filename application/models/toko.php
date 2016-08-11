@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class toko extends CI_models{
+
     function GetTokoID($userid){
         $this->db->select('Toko_ID');
         $this->db->where('UserID', $userid);
@@ -9,25 +10,25 @@ class toko extends CI_models{
         return $query->row_array();
      }
 
-     function GetTokoData($userid){
-         $this->db->where('UserID', $userid);
+     function GetTokoData($Tokoid){
+         $this->db->where('Toko_ID', $Tokoid);
          $query = $this->db->get('toko_order');
          return $query->row_array();
      }
 
      function setToko($Tokoid, $datatoko){
-         $this->db->where('Toko_ID', $userid);
+         $this->db->where('Toko_ID', $Tokoid);
          $this->db->update('toko_order', $datatoko);
          return true;
         }
 
-     function changeToko($Tokoid, $changedatatoko){
+     function ChangeToko($Tokoid, $changedatatoko){
          $this->db->where('Toko_ID', $userid);
          $this->db->update('toko_order', $changedatatoko);
          return true;
      }
 
-     function changefoto($Tokoid, $urlfoto){
+     function ChangeFoto($Tokoid, $urlfoto){
          $this->db->set('foto_toko', $urlfoto);
          $this->db->where('Toko_ID', $tokoid);
          $this->db->update('Fototoko');
@@ -58,7 +59,6 @@ class toko extends CI_models{
          $this->db->delete('toko_order');
          return true;
      }
- 
 
 }
 ?>

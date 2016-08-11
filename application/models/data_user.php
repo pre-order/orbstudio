@@ -10,9 +10,9 @@ class data_user extends CI_models{
         return $query->row_array();
     }
 
-    function GetUserData($email){
+    function GetUserData($UserID){
         if($email != FALSE) {
-            $query = $this->db->get_where('data_user', array('Email' => $email));
+            $query = $this->db->get_where('data_user', array('UserID' => $UserID));
             return $query->row_array();
              }
         else {

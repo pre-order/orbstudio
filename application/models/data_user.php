@@ -10,9 +10,9 @@ class data_user extends CI_models{
         return $query->row_array();
     }
 
-    function GetUserData($UserID){
+    function GetUserData($userid){
         if($email != FALSE) {
-            $query = $this->db->get_where('data_user', array('UserID' => $UserID));
+            $query = $this->db->get_where('data_user', array('User_ID' => $userid));
             return $query->row_array();
              }
         else {
@@ -21,20 +21,20 @@ class data_user extends CI_models{
         
     }
 
-    function GetAlamat($email){
+    function GetAlamat($userid){
         $this->db->select('Provinsi');
         $this->db->select('Kabupaten');
         $this->db->select('Kecamatan');
         $this->db->select('Alamat_User');
-        $this->db->where('Email', $email);
+        $this->db->where('User_ID', $userid);
         $query = $this->db->get('data_user');
         return $query->row_array();
     }
 
         
-    function GetPassword($email){
+    function GetPassword($userid){
         $this->db->select('Pass');
-        $this->db->where('Email', $email);
+        $this->db->where('User_ID', $userid);
         $query = $this->db->get('data_user');
         return $query->row_array();
     }
@@ -58,11 +58,12 @@ class data_user extends CI_models{
         $this->db->set('Password', $password);
         $this->db->where('Email', $email);
         $thos->db->update('data_user');
-        return true;
+        
     }
 
-    function RegistUser($datauser){
+    function SetUser($datauser){
         $this->db->insert('data_user',$datauser);
+        
     }
 
 

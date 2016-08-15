@@ -16,8 +16,7 @@ class toko extends CI_models{
          return $query->row_array();
      }
 
-     function setToko($Tokoid, $datatoko){
-         $this->db->where('Toko_ID', $Tokoid);
+     function setToko($datatoko){
          $this->db->update('toko_order', $datatoko);
          return true;
         }

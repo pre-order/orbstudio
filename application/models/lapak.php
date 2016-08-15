@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class toko extends CI_models{
+class lapak extends CI_models{
     function GetLapakID($tokoID){
         $this->db->select('Lapak_ID');
         $this->db->where('Toko_ID', $tokoid);

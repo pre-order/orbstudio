@@ -5,7 +5,7 @@ class lapak extends CI_models{
     function GetLapakID($tokoID){
         $this->db->select('Lapak_ID');
         $this->db->where('Toko_ID', $tokoid);
-        $query = $this->db->get('toko_order');
+        $query = $this->db->get('lapak');
         return $query->row_array();
     }
 
@@ -13,6 +13,13 @@ class lapak extends CI_models{
         $this->db->where('Lapak_ID', $lapakid);
          $query = $this->db->get('lapak');
          return $query->row_array();
+    }
+
+    function GetNamaLapak($lapakid){
+        $this->db->select('Nama_lapak');
+        $this->db->where('Lapak_ID', $lapakid);
+        $query = $this->db->get('lapak');
+        return $query->row_array();
     }
 
     function getKategori($kategori){
@@ -27,6 +34,7 @@ class lapak extends CI_models{
         $this->db->update('lapak');
         return true;
     }
+
 
     function setLapak($data){
         $this->db->insert($data);

@@ -3,10 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class keranjang extends CI_models{
 
-function GetKeranjangID($userid,$lapakid){
+function GetKeranjangID($userid){
     $this->db->select('Keranjang_ID');
     $this->db->where('User_ID', $userid);
-    $this->db->where('Lapak_ID', $lapakid);
     $query = $this->db->get('keranjang_pesan');
     return $query->row_array();
 }

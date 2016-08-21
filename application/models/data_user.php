@@ -4,14 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class data_user extends CI_models{
 
     function GetUserID($email){
-        $this->db->select('UserID');
+        $this->db->select('User_ID');
         $this->db->where('Email', $email);
         $query = $this->db->get('data_user');
         return $query->row_array();
     }
 
     function GetUserData($userid){
-        if($email != FALSE) {
+        if($userid != FALSE) {
             $query = $this->db->get_where('data_user', array('User_ID' => $userid));
             return $query->row_array();
              }

@@ -1,52 +1,40 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Regist extends CI_Controller {
+ defined('BASEPATH') OR exit('No direct script access allowed');
 
-	 public function __construct()
-    {
-        parent::__construct();
-        // load from and url helper optional (in this tutorial)
-        $this->load->helper(array(
-            'form',
-            'url'
-        ));
-        // load database
-        $this->load->database();
-        // load form validation library
-        $this->load->library('form_validation');
+	class register extends CI_Controller {
+
+        function __construct(){
+	    parent::__construct();
+        $this->load->model('data_user', '',TRUE);
         $this->load->library('encryption');
-        
+        $this->load->model('data_user');
+  	}
+
+
+    function index(){
+        $this->load->view('head');
+        $this->load->view('nabvarbefore');
+        $this->load->view('register/main');
+        $this->load->view('footer');
     }
 
-        //wraper tampilan registration form
-	public function registform()
-	{
-		$this->load->view('head');
-                $this->load->view('navbar');
-                $this->load->view('Register/RegistForm.php');
-                $this->load->view('footer');
-	}
-        
-        public function registerasi()
-        {
-            
-            $this->load->library('form_validation');
+    function Regist(){
+
+          $this->load->library('form_validation');
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[data_user.Email]');
             $this->form_validation->set_message('is_unique[data_user.Email]', 'Email sudah di gunakan');
-            if ($this->form_validation->run() == FALSE)
-		{
+            if ($this->form_validation->run() == FALSE){
 		        $this->load->view('head');
                 $this->load->view('navbar');
                 $this->load->view('Register/RegistForm.php');
                 $this->load->view('footer');
 		}
-		else
-		{
+		else{
                 $date = $_POST['tanggal'] . '-' . $_POST['bulan'] . '-' . $_POST['tahun'];
                 $password = $this->input->post('pwd');
                 $hash = $this->encryption->encrypt($password);
-                $data = array(
+                $datauser = array(
                     'Nama_user' => $this->input->post('nama'),
                     'jenis_kel' => $this->input->post('jenisKelamin'),
                     'Email'=> $this->input->post('email'),
@@ -57,16 +45,15 @@ class Regist extends CI_Controller {
                     'Alamat_user' => $this->input->post('alamat'),
                     'Contac_User' => $this->input->post('noTelp'),
                     'Pass'=> $hash );
-                $this->db->insert('data_user', $data);
+                $this->data_user->SetUser($datauser);
                 $this->load->view('head');
                 $this->load->view('navbar');
                 $this->load->view('Register/regist_success');
                 $this->load->view('footer');
 		}
-        }
-        
-    
-    
+    }
+
+
     public function email_check()
     {
         // allow only Ajax request    
@@ -80,6 +67,9 @@ class Regist extends CI_Controller {
             }
         }
     }
+    
 
-}
-        
+    
+    
+    
+    }?>

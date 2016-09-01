@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class data_user extends CI_models{
+Class data_user extends CI_model{
 
     function GetUserID($email){
         $this->db->select('User_ID');
@@ -40,9 +40,9 @@ class data_user extends CI_models{
     }
 
 
-    function GetContact($email){
+    function GetContact($userid){
         $this->db->select('Contact_User');
-        $this->db->where('Email', $email);
+        $this->db->where('User_ID', $email);
         $query = $this->db->get('data_user');
         return $query->row_array();
     }
@@ -57,7 +57,7 @@ class data_user extends CI_models{
     function changePasword($email,$password){
         $this->db->set('Password', $password);
         $this->db->where('Email', $email);
-        $thos->db->update('data_user');
+        $this->db->update('data_user');
         
     }
 

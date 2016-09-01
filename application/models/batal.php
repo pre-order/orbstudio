@@ -1,6 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-class batal extends CI_models{
+Class batal extends CI_model{
 
 function GetBatalID($keranjangid){
     $this->db->select('Batal_ID');

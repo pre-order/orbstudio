@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class keranjang extends CI_models{
+Class keranjang extends CI_model{
 
 function GetKeranjangID($userid){
     $this->db->select('Keranjang_ID');

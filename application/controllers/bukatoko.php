@@ -1,29 +1,21 @@
-<?php
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
 
- defined('BASEPATH') OR exit('No direct script access allowed');
-
-	class Homepage extends CI_Controller {
-
+class bukatoko extends CI_Controller{
         function __construct(){
 	    parent::__construct();
+        $this->load->library('session');
         $this->load->model('data_user');
-        $this->load->model('keranjang');
         $this->load->model('lapak');
+        $this->load->model('keranjang');
+        $this->load->model('toko');
+        $this->load->model('perijinan');
+        $this->load->model('rating');
+        $this->load->helper('file');
   	}
 
-
-        function index(){
-            if($this->session->userdata('User_ID')){
-                redirect('Homepage/viewHomeUser', 'refresh');
-            }
-            else{
-                redirect('Homepage/ViewHomeGuest', 'refresh');
-            }
-        }
-
-        function viewHomeUser(){
-            if($this->session->userdata('User_ID')){
-               $userid = $this->session->userdata('User_ID');
+      function bukatokoview(){
+          $userid = $this->session->userdata('User_ID');
                $this->data_user->GetUserData($userid);
                foreach ($query->row_array() as $baris){
                    $namauser = $baris['Nama_User'];
@@ -53,26 +45,21 @@
 
                $this->load->view('head');
                $this->load->view('navbarafter', $data);
-               $this->load->view('mainpage/banner');
-               $this->load->view('mainpage/hotkategori');
+               $this->load->view('toko/tokoform');
                $this->load->view('footer');
-            }
-            else{
-                redirect('login/viewlogin', 'refresh');
-            }
-        }
+      }
 
-        function ViewHomeGuest(){
-            if($this->session->userdata('User_ID')){
-               redirect('Homepage/viewHomeUser', 'refresh');
-            }
-            else{
-               $this->load->view('head');
-               $this->load->view('navbarbefore');
-               $this->load->view('mainpage/banner');
-               $this->load->view('mainpage/hotkategori');
-               $this->load->view('footer');
-            }
-        }
+      function bukatoko(){
+            $userid = $this->session->userdata('User_ID');
+               $datatoko = array(
+                   'User_ID' => $userid,
+                  'Nama_toko' => $this->input->post('namatoko'),
+                  'Alamat_toko' => $this->input->post('alamat'),
+                  'Kontak_toko' => $this->input->post('Kontak_toko'),
+                  'foto_toko' => $this->input->post('Foto')
+               );
+               $this->toko->SetToko($datatoko);
+               
+      }
 
-    }?>
+}?>

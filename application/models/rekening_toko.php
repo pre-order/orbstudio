@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class toko extends CI_models{
+Class toko extends CI_model{
   function GetRekeningData($tokoid){
       $this->db->where('Toko_ID', $tokoid);
       $query = $this->db->get('rekening_toko');

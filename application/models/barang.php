@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class barang extends CI_models{
+Class barang extends CI_model{
     function GetItemID($lapakid){
         $this->db->select('Item_ID');
         $this->db->where('Lapak_ID', $lapakid);

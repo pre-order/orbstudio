@@ -1,7 +1,9 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class lapak extends CI_models{
+Class lapak extends CI_model{
+
+    
     function GetLapakID($tokoID){
         $this->db->select('Lapak_ID');
         $this->db->where('Toko_ID', $tokoid);
@@ -15,6 +17,12 @@ class lapak extends CI_models{
          return $query->row_array();
     }
 
+    function GetLapakKategori($kategori){
+        $this->db->where('Kategori_Item');
+        $query = $this->db->get('lapak');
+        return $query->row_array();
+    }
+
     function GetNamaLapak($lapakid){
         $this->db->select('Nama_lapak');
         $this->db->where('Lapak_ID', $lapakid);
@@ -22,13 +30,13 @@ class lapak extends CI_models{
         return $query->row_array();
     }
 
-    function getKategori($kategori){
+    function GetKategori($kategori){
         $this->db->where('kategori');
         $query = $this->db->get('lapak');
         return $query->row_array();
     }
 
-    function changestatuslapak($lapakid, $status){
+    function ChangeStatusLapak($lapakid, $status){
         $this->db->set('Status_lapak', $status);
         $this->db->where('Lapak_ID', $lapakid);
         $this->db->update('lapak');
@@ -36,10 +44,11 @@ class lapak extends CI_models{
     }
 
 
-    function setLapak($data){
-        $this->db->insert($data);
+    function SetLapak($datalapak){
+        $this->db->insert($datalapak);
         return true;
     }
+
 
 }
 

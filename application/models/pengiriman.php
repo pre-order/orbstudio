@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pengiriman extends CI_models{
+Class pengiriman extends CI_model{
     
     function GetKirimID($keranjangid){
         $this->db->select('Kirim_ID');

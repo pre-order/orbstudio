@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class perijinan extends CI_models{
+Class perijinan extends CI_model{
         
         function GetIdIjin($userid){
             $this->db->select('ID_ijin');

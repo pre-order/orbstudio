@@ -1,6 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-class readystock extends CI_models{
+Class readystock extends CI_model{
     function GetTokoID($tokoid){
         $this->db->select('Barang_Ready_ID');
         $this->db->where('Toko_ID', $tokoid);

@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pesanan extends CI_models{
+Class pesanan extends CI_model{
 
     function GetOrderID($keranjangid){
         $this->db->select('Order_ID');

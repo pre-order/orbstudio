@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pembayaran extends CI_models{
+Class pembayaran extends CI_model{
     function GetPembayaranID($keranjangid,$userid){
         $this->db->select('Bayar_ID');
         $this->db->where('Keranjang_ID', $keranjangid);

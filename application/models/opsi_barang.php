@@ -1,6 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-class opsi_barang extends CI_models{
+Class opsi_barang extends CI_model{
 
     function GetOpsiID($itemid){
         $this->db->select('ID_Opsi');
